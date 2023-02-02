@@ -1,7 +1,7 @@
 require("dotenv").config();
 const apiKey = `${process.env.API_KEY}`;
 const func = "TIME_SERIES_DAILY_ADJUSTED";
-const symbol = "IBM";
+const symbol = "TSLA";
 const baseURL = `https://www.alphavantage.co/query?`;
 const endPoint = `function=${func}&symbol=${symbol}&apikey=${apiKey}`;
 const url = baseURL + endPoint;
