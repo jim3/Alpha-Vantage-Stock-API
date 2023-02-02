@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Stocks</title>
+        <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    </head>
+    <body>
+        <%- include("header") %>
+
+        <h1 style="text-align: center">☀⛅🌦</h1>
+        <fieldset>
+            <form action="/" method="POST">
+                <label for="stocks">Input Stock Info:</label><br />
+                <input type="text" id="stocks" name="zip" /><br />
+                <input type="submit" value="Submit" />
+            </form>
+        </fieldset>
+
+        <h1 style="text-align: center">AlphaVantage 3 Month Daily Stocks</h1>
+        <div id="box-1">
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Open</th>
+                    <th>High</th>
+                    <th>Close</th>
+                    <th>Volume</th>
+                    <th>AdjustedClose</th>
+                    <th>DividendAmount</th>
+                    <th>SplitCoefficient</th>
+                </tr>
+                    <% if (typeof date !=="undefined" ) { %>
+                    <% for (let i=0; i < date.length; i++) { %>
+                    <tr>
+                    <td><%= date[i] %></td>
+                    <td><%= open[i] %></td>
+                    <td><%= high[i] %></td>
+                    <td><%= close[i] %></td>
+                    <td><%= volume[i] %></td>
+                    <td><%= adjustedClose[i] %></td>
+                    <td><%= dividendAmount[i] %></td>
+                    <td><%= splitCoefficient[i] %></td>
+
+                    <% } %> <% } else { %>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <% } %>
+
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
