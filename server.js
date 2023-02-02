@@ -11,6 +11,7 @@ app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use("/", require("./routes/index"));
+app.use("/about", require("./routes/about"));
 
 app.listen(port, () => {
     console.log(`App listening on port ${port}!`);
