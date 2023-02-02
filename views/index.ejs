@@ -9,16 +9,14 @@
     <body>
         <%- include("header") %>
 
-        <h1 style="text-align: center">☀⛅🌦</h1>
+        <h1 style="text-align: center">Alpha Vantage Stock API Search (Daily Adjusted)</h1>
         <fieldset>
             <form action="/" method="POST">
-                <label for="stocks">Input Stock Info:</label><br />
-                <input type="text" id="stocks" name="zip" /><br />
+                <label for="stocksymbol">Enter stock symbol:</label><br />
+                <input type="text" id="stocksymbol" name="stocksymbol" /><br />
                 <input type="submit" value="Submit" />
             </form>
         </fieldset>
-
-        <h1 style="text-align: center">AlphaVantage 3 Month Daily</h1>
         <div id="box-1">
             <table>
                 <tr>

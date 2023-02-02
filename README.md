@@ -14,6 +14,8 @@
 
 ---
 
-The stock symbol is currently hardcoded to display the daily stock price.
-
-To change the stock symbol, just edit the `symbol` varaible in `getStockData.js`.
+1. Enter stock symbol into your html form, e.g. `AAPL`
+2. Click the `Submit` button
+3. The server will make a request to the Alpha Vantage API and return the data to the client
+4. The client will display the data in the browser
+5. ...

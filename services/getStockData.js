@@ -1,13 +1,15 @@
 require("dotenv").config();
+
 const apiKey = `${process.env.API_KEY}`;
 const func = "TIME_SERIES_DAILY_ADJUSTED";
-const symbol = "TSLA";
 const baseURL = `https://www.alphavantage.co/query?`;
-const endPoint = `function=${func}&symbol=${symbol}&apikey=${apiKey}`;
-const url = baseURL + endPoint;
 
-const getStockData = async () => {
+const getStockData = async (symbol) => {
     try {
+        const endPoint = `function=${func}&symbol=${symbol}&apikey=${apiKey}`;
+        console.log(endPoint);
+        const url = baseURL + endPoint;        
+        console.log(url);
         const res = await fetch(url);
         const data = await res.json();
         const date = Object.keys(data["Time Series (Daily)"]);
