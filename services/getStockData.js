@@ -7,7 +7,7 @@ const baseURL = `https://www.alphavantage.co/query?`;
 const getStockData = async (symbol) => {
     try {
         const endPoint = `function=${func}&symbol=${symbol}&apikey=${apiKey}`;
-        const url = baseURL + endPoint;        
+        const url = baseURL + endPoint;
         const res = await fetch(url);
         const data = await res.json();
         const date = Object.keys(data["Time Series (Daily)"]);
@@ -34,5 +34,4 @@ const getStockData = async (symbol) => {
         console.log(error);
     }
 };
-
 module.exports = getStockData;
