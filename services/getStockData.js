@@ -34,4 +34,5 @@ const getStockData = async (symbol) => {
         console.log(error);
     }
 };
+
 module.exports = getStockData;
