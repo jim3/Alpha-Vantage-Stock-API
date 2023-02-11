@@ -51,4 +51,3 @@ const mydb = async (month, percentage) => {
 
 module.exports = getEconomics;
 
-// https://www.alphavantage.co/query?function=UNEMPLOYMENT&apikey=D0z0azuGapWNctPV2pZeYwrxCYPt5ztU
