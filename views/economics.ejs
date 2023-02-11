@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Stocks</title>
+        <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    </head>
+    <body>
+        <%- include("header") %>
+
+        <h1 style="text-align: center">Alpha Vantage Economics Indicator</h1>
+
+        <div id="box-1">
+            <table>
+                <tr>
+                    <th>Month</th>
+                    <th>Percentage</th>
+                </tr>
+
+                <% if (typeof month !== "undefined" ) { %> <% for (let i=0; i < 6; i++) { %>
+                <tr>
+                    <td><%= month[i] %></td>
+                    <td><%= percentage[i] %></td>
+
+                    <% } %> <% } else { %>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <% } %>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

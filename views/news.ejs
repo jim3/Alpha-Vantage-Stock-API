@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Stocks</title>
+        <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    </head>
+    <body>
+        <%- include("header") %>
+        
+        <h1 style="text-align: center">Alpha Vantage Stock News</h1>
+
+        <div id="box-1">
+            <table>
+                <tr>
+                    <th>Title</th>
+                    <th>URL</th>
+                    <th>Summary</th>
+                </tr>
+
+                <% if (typeof title !== "undefined" ) { %> <% for (let i=0; i < title.length; i++) { %>
+                <tr>
+                    <td><%= title[i] %></td>
+                    <td><%= url[i] %></td>
+                    <td><%= summary[i] %></td>
+
+                    <% } %> <% } else { %>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <% } %>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
