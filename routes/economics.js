@@ -13,5 +13,3 @@ router.get("/", async (req, res) => {
 
 module.exports = router;
 
-// const economicDataCollection = client.db("alpha_vantage").collection("economics");
-// const economicData = await economicDataCollection.find().toArray();
