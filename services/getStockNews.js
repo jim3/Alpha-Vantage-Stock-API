@@ -16,7 +16,8 @@ const getStockNews = async () => {
         const title = Object.values(data["feed"]).map((e) => e["title"]);
         const url = Object.values(data["feed"]).map((e) => e["url"]);
         const summary = Object.values(data["feed"]).map((e) => e["summary"]);
-        mydb(title, url, summary); // call the mydb function to insert the data into the database
+        
+        mydb(title, url, summary); // call mydb before the return
 
         return {
             title: title,
